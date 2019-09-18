@@ -31,7 +31,7 @@ with open(package_json, encoding='utf-8') as f:
 '''
 setup(
 
-    name='ccxt',
+    name='ktccxt',
     version='0.0.1',
 
     description="KloudTrader's extended version of ccxt's python module. Powers Libkloudtrader's crypto trading.",
