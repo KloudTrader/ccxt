@@ -13,60 +13,46 @@ here = path.abspath(path.dirname(__file__))
 root = path.dirname(here)
 
 readme = path.join(here, 'README.rst')
-package_json = path.join(here, 'package.json')
+#package_json = path.join(here, 'package.json')
 
 # a workaround when installing locally from git repository with pip install -e .
+'''
 if not path.isfile(package_json):
     package_json = path.join(root, 'package.json')
-
+'''
 # long description from README file
 with open(readme, encoding='utf-8') as f:
     long_description = f.read()
 
 # version number and all other params from package.json
+'''
 with open(package_json, encoding='utf-8') as f:
     package = json.load(f)
-
+'''
 setup(
 
-    name=package['name'],
-    version=package['version'],
+    name='ccxt',
+    version='0.0.1',
 
-    description=package['description'],
-    long_description=long_description,
+    description="KloudTrader's extended version of ccxt's python module. Powers Libkloudtrader's crypto trading.",
+    long_description="KloudTrader's extended version of ccxt's python module. Powers Libkloudtrader's crypto trading.",
 
     # will switch from rst to md shortly
     # long_description_content_type='text/markdown',
 
-    url=package['homepage'],
+    url="",
 
-    author=package['author']['name'],
-    author_email=package['author']['email'],
+    author='KloudTrader',
+    author_email='admin@kloudtrader.com',
 
-    license=package['license'],
+    license="",
 
     classifiers=[
-        'Development Status :: 4 - Beta',
-        'Intended Audience :: Developers',
-        'Intended Audience :: Financial and Insurance Industry',
-        'Intended Audience :: Information Technology',
-        'Topic :: Software Development :: Build Tools',
-        'Topic :: Office/Business :: Financial :: Investment',
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: JavaScript',
-        'Programming Language :: PHP',
-        'Operating System :: OS Independent',
-        'Environment :: Console'
+        "KloudTrader",
+        "ccxt"
     ],
 
-    keywords=package['keywords'],
+    keywords="",
     packages=find_packages(exclude=['ccxt.async_support*'] if is_python_2 else []),
 
     install_requires=[
@@ -74,6 +60,7 @@ setup(
         'certifi>=2018.1.18',
         'requests>=2.18.4',
         'cryptography>=2.6.1',
+        'web3'
     ],
 
     extras_require={
