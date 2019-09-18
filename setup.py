@@ -74,7 +74,6 @@ setup(
         'certifi>=2018.1.18',
         'requests>=2.18.4',
         'cryptography>=2.6.1',
-        'web3'
     ],
 
     extras_require={
