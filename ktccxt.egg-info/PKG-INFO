@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ktccxt
+Version: 0.0.1
+Summary: KloudTrader's extended version of ccxt's python module. Powers Libkloudtrader's crypto trading.
+Home-page: UNKNOWN
+Author: KloudTrader
+Author-email: admin@kloudtrader.com
+License: UNKNOWN
+Description: KloudTrader's extended version of ccxt's python module. Powers Libkloudtrader's crypto trading.
+Platform: UNKNOWN
+Classifier: KloudTrader
+Classifier: ccxt
+Provides-Extra: qa
+Provides-Extra: doc
